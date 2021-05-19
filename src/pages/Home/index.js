@@ -1,28 +1,27 @@
 import React from 'react';
-import {Text, View, Image, ScrollView} from 'react-native';
+import {View, ScrollView} from 'react-native';
 import style from './style';
-import {FoodDummy6, ProfileDummy} from '../../assets';
-import {FoodCard, Gap} from '../../components';
+import {FoodDummy6, FoodDummy3, FoodDummy4, FoodDummy2} from '../../assets';
+import {FoodCard, Gap, HeaderProfile, TabBarSection} from '../../components';
 
 const Home = () => {
   return (
     <View style={style.container}>
-      <View style={style.headerProfile}>
-        <View style={style.flexColumn}>
-          <Text style={style.title}>Food Market</Text>
-          <Text style={style.subTitle}>Let's go some foods</Text>
-        </View>
-        <Image source={ProfileDummy} style={style.image} />
+      <HeaderProfile />
+      <View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View style={style.foodCardContainer}>
+            <Gap width={40} />
+            <FoodCard image={FoodDummy6} nameTitle="Dessert" />
+            <FoodCard image={FoodDummy4} nameTitle="Coffe" />
+            <FoodCard image={FoodDummy2} nameTitle="Food Dummy" />
+            <FoodCard image={FoodDummy3} nameTitle="Food Dummy" />
+          </View>
+        </ScrollView>
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <View style={style.foodCardContainer}>
-          <Gap width={40} />
-          <FoodCard image={FoodDummy6} nameTitle="Food Dummy" />
-          <FoodCard image={FoodDummy6} nameTitle="Food Dummy" />
-          <FoodCard image={FoodDummy6} nameTitle="Food Dummy" />
-          <FoodCard image={FoodDummy6} nameTitle="Food Dummy" />
-        </View>
-      </ScrollView>
+      <View style={style.tabContainer}>
+        <TabBarSection />
+      </View>
     </View>
   );
 };

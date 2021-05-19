@@ -7,8 +7,6 @@ export default {
     paddingBottom: 20,
     paddingHorizontal: 40,
     justifyContent: 'space-between',
-    borderTopLeftRadius: 35,
-    borderTopRightRadius: 35,
     shadowColor: 'green',
     shadowOffset: {
       width: 0,

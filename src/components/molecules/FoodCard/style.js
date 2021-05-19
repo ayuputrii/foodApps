@@ -13,7 +13,7 @@ export default {
   image: {
     width: 200,
     height: 140,
-    resizeMod: 'cover',
+    resizeMode: 'cover',
   },
   content: {
     padding: 12,
@@ -21,19 +21,6 @@ export default {
   text: {
     fontSize: 12,
     fontFamily: 'Poppins-Regular',
-    color: '#020202',
-  },
-  ratingContent: {
-    flexDirection: 'row',
-  },
-  starContent: {
-    top: 5,
-    flexDirection: 'row',
-  },
-  textRate: {
-    left: 7,
-    fontSize: 17,
-    fontFamily: 'Poppins-Light',
     color: '#020202',
   },
 };
