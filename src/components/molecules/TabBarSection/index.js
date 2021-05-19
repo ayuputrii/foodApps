@@ -8,6 +8,7 @@ const newTaste = () => {
   return (
     <View style={style.container}>
       <ListItemFood />
+      <ListItemFood />
     </View>
   );
 };
