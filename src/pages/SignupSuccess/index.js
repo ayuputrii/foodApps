@@ -4,7 +4,7 @@ import {IlSuccessSignUp} from '../../assets';
 import {Button, Gap} from '../../components';
 import style from './style';
 
-const SignupSuccess = () => {
+const SignupSuccess = ({navigation}) => {
   return (
     <View style={style.container}>
       <IlSuccessSignUp />
@@ -15,7 +15,10 @@ const SignupSuccess = () => {
       <Text style={style.subTitle}>some foods as a self-reward</Text>
       <Gap height={26} />
       <View style={style.buttonContainer}>
-        <Button labelButton="Find Foods" />
+        <Button
+          labelButton="Find Foods"
+          onPress={() => navigation.replace('MainApp')}
+        />
       </View>
     </View>
   );

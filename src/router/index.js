@@ -5,10 +5,26 @@ import {
   SignUp,
   SignupAddress,
   SignupSuccess,
+  Home,
+  Order,
+  Profile,
 } from '../pages';
 import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {BottomNavigation} from '../components';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const MainApp = () => {
+  return (
+    <Tab.Navigator tabBar={props => <BottomNavigation {...props} />}>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Order" component={Order} />
+      <Tab.Screen name="Profile" component={Profile} />
+    </Tab.Navigator>
+  );
+};
 
 const Router = () => {
   return (
@@ -37,6 +53,11 @@ const Router = () => {
         options={{headerShown: false}}
         name="SignupSuccess"
         component={SignupSuccess}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="MainApp"
+        component={MainApp}
       />
     </Stack.Navigator>
   );
