@@ -3,12 +3,15 @@ import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {Dimensions, Text, View} from 'react-native';
 import style from './style';
 import ListItemFood from '../ListItemFood';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const newTaste = () => {
   return (
     <View style={style.container}>
-      <ListItemFood />
-      <ListItemFood />
+      <ScrollView>
+        <ListItemFood />
+        <ListItemFood />
+      </ScrollView>
     </View>
   );
 };

@@ -1,8 +1,9 @@
 export default {
   viewContainer: {
+    marginTop: 18,
     flexDirection: 'row',
     paddingHorizontal: 24,
-    paddingVertical: 20,
+    paddingVertical: 2,
     alignItems: 'center',
   },
   imageContent: {
