@@ -40,7 +40,10 @@ const OrderSummary = ({navigation}) => {
         <ItemsValue label="City" value="Bandung" />
       </View>
       <View style={style.button}>
-        <Button labelButton="Checkout Now" />
+        <Button
+          labelButton="Checkout Now"
+          onPress={() => navigation.replace('OrderSuccess')}
+        />
       </View>
     </View>
   );
