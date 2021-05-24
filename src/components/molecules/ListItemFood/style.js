@@ -1,11 +1,12 @@
 export default {
-  viewContainer: {
+  viewContainer: (paddingHorizontal, paddingVertical) => ({
     marginTop: 10,
     flexDirection: 'row',
-    paddingHorizontal: 24,
-    paddingVertical: 2,
+    paddingHorizontal: paddingHorizontal,
+    paddingVertical: paddingVertical,
     alignItems: 'center',
-  },
+    backgroundColor: 'white',
+  }),
   imageContent: {
     width: 60,
     height: 60,
@@ -23,7 +24,12 @@ export default {
     color: '#22211f',
   },
   subTextMenuContent: {
-    fontSize: 12,
+    fontSize: 13,
+    fontFamily: 'Poppins-Regular',
+    color: '#8D92A3',
+  },
+  textItems: {
+    fontSize: 13,
     fontFamily: 'Poppins-Regular',
     color: '#8D92A3',
   },

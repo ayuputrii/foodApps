@@ -5,6 +5,8 @@ import TabBarSection from './TabBarSection';
 import HeaderProfile from './HeaderProfile';
 import Rating from './Rating';
 import Counter from './Counter';
+import ListItemFood from './ListItemFood';
+import ItemsValue from './ItemsValue';
 
 export {
   Header,
@@ -14,4 +16,6 @@ export {
   HeaderProfile,
   Rating,
   Counter,
+  ListItemFood,
+  ItemsValue,
 };

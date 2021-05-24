@@ -1,18 +1,26 @@
 import React from 'react';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
-import {Dimensions, Text, View} from 'react-native';
+import {Dimensions, Text, View, ScrollView} from 'react-native';
 import style from './style';
 import ListItemFood from '../ListItemFood';
-import {ScrollView} from 'react-native-gesture-handler';
 import {useNavigation} from '@react-navigation/native';
+import {FoodDummy1} from '../../../assets';
 
 const newTaste = () => {
   const navigation = useNavigation();
   return (
     <View style={style.container}>
       <ScrollView>
-        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
-        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
+        <ListItemFood
+          rating={2}
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ListItemFood
+          rating={2}
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
       </ScrollView>
     </View>
   );
@@ -23,8 +31,16 @@ const Popular = () => {
   return (
     <View style={style.container}>
       <ScrollView>
-        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
-        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
+        <ListItemFood
+          rating={2}
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ListItemFood
+          rating={2}
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
       </ScrollView>
     </View>
   );
@@ -35,8 +51,14 @@ const Recomended = () => {
   return (
     <View style={style.container}>
       <ScrollView>
-        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
-        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
+        <ListItemFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
+        <ListItemFood
+          image={FoodDummy1}
+          onPress={() => navigation.navigate('FoodDetail')}
+        />
       </ScrollView>
     </View>
   );
