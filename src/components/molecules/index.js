@@ -3,5 +3,15 @@ import BottomNavigation from './BottomNavigation';
 import FoodCard from './FoodCard';
 import TabBarSection from './TabBarSection';
 import HeaderProfile from './HeaderProfile';
+import Rating from './Rating';
+import Counter from './Counter';
 
-export {Header, BottomNavigation, FoodCard, TabBarSection, HeaderProfile};
+export {
+  Header,
+  BottomNavigation,
+  FoodCard,
+  TabBarSection,
+  HeaderProfile,
+  Rating,
+  Counter,
+};

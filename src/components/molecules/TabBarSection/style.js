@@ -13,5 +13,9 @@ export default {
   },
   styleTab: {
     backgroundColor: 'white',
+    elevation: 0,
+    shadowOpacity: 0,
+    borderBottomWidth: 1,
+    borderBottomColor: '#F2f2f2',
   },
 };

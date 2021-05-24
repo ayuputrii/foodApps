@@ -1,6 +1,6 @@
 export default {
   viewContainer: {
-    marginTop: 18,
+    marginTop: 10,
     flexDirection: 'row',
     paddingHorizontal: 24,
     paddingVertical: 2,

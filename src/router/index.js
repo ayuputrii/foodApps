@@ -8,6 +8,7 @@ import {
   Home,
   Order,
   Profile,
+  FoodDetail,
 } from '../pages';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -58,6 +59,11 @@ const Router = () => {
         options={{headerShown: false}}
         name="MainApp"
         component={MainApp}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="FoodDetail"
+        component={FoodDetail}
       />
     </Stack.Navigator>
   );

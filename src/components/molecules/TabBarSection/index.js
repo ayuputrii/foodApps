@@ -4,20 +4,43 @@ import {Dimensions, Text, View} from 'react-native';
 import style from './style';
 import ListItemFood from '../ListItemFood';
 import {ScrollView} from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/native';
 
 const newTaste = () => {
+  const navigation = useNavigation();
   return (
     <View style={style.container}>
       <ScrollView>
-        <ListItemFood />
-        <ListItemFood />
+        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
+        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
       </ScrollView>
     </View>
   );
 };
 
-const Popular = () => <View style={{flex: 1, backgroundColor: 'white'}} />;
-const Recomended = () => <View style={{flex: 1, backgroundColor: 'white'}} />;
+const Popular = () => {
+  const navigation = useNavigation();
+  return (
+    <View style={style.container}>
+      <ScrollView>
+        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
+        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
+      </ScrollView>
+    </View>
+  );
+};
+
+const Recomended = () => {
+  const navigation = useNavigation();
+  return (
+    <View style={style.container}>
+      <ScrollView>
+        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
+        <ListItemFood onPress={() => navigation.navigate('FoodDetail')} />
+      </ScrollView>
+    </View>
+  );
+};
 
 const initialLayout = {width: Dimensions.get('window').width};
 
@@ -61,6 +84,7 @@ const TabBarSection = () => {
       renderScene={renderScene}
       onIndexChange={setIndex}
       initialLayout={initialLayout}
+      style={{backgroundColor: 'white'}}
     />
   );
 };
