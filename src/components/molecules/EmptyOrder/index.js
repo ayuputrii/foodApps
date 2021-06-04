@@ -9,10 +9,10 @@ const EmptyOrder = ({navigation}) => {
     <View style={style.container}>
       <IlEmptyOrder />
       <Gap height={25} />
-      <Text style={style.title}>You've made order</Text>
+      <Text style={style.title}>Yeay Completed</Text>
       <Gap height={5} />
-      <Text style={style.subTitle}>Just stay at home while we are</Text>
-      <Text style={style.subTitle}>preparing your best foods</Text>
+      <Text style={style.subTitle}>Now you are able to order</Text>
+      <Text style={style.subTitle}>some foods as a self-reward</Text>
       <Gap height={26} />
       <View style={style.buttonContainer}>
         <Button
