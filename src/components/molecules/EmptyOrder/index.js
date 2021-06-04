@@ -1,13 +1,13 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import {IlSuccessOrder} from '../../assets';
-import {Button, Gap} from '../../components';
+import {IlEmptyOrder} from '../../../assets';
+import {Button, Gap} from '../../atoms';
 import style from './style';
 
-const OrderSuccess = ({navigation}) => {
+const EmptyOrder = ({navigation}) => {
   return (
     <View style={style.container}>
-      <IlSuccessOrder />
+      <IlEmptyOrder />
       <Gap height={25} />
       <Text style={style.title}>You've made order</Text>
       <Gap height={5} />
@@ -16,19 +16,12 @@ const OrderSuccess = ({navigation}) => {
       <Gap height={26} />
       <View style={style.buttonContainer}>
         <Button
-          labelButton="Order Other Foods"
+          labelButton="Find Foods"
           onPress={() => navigation.replace('MainApp')}
-        />
-        <Gap height={12} />
-        <Button
-          textColor="white"
-          labelButton="View My Order"
-          color="#8D92A3"
-          onPress={() => navigation.replace('MainApp', {screen: 'Order'})}
         />
       </View>
     </View>
   );
 };
 
-export default OrderSuccess;
+export default EmptyOrder;
