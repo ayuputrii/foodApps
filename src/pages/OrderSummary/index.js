@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Header, ItemsValue, ListItemFood} from '../../components';
-import {ScrollView, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import style from './style';
 import {FoodDummy1} from '../../assets';
 
@@ -18,6 +18,8 @@ const OrderSummary = ({navigation}) => {
         <ListItemFood
           image={FoodDummy1}
           items={20}
+          name="Sop Bumal"
+          price="200.000"
           paddingHorizontal={-20}
           paddingVertical={-2}
         />

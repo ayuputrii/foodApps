@@ -33,4 +33,14 @@ export default {
     fontFamily: 'Poppins-Regular',
     color: '#8D92A3',
   },
+  date: {
+    fontSize: 10,
+    fontFamily: 'Poppins-Regular',
+    color: '#8D92A3',
+  },
+  status: {
+    fontSize: 10,
+    fontFamily: 'Poppins-Regular',
+    color: '#D9435E',
+  },
 };

@@ -1,12 +1,22 @@
-import React from 'react';
-import {Text, View} from 'react-native';
-import {EmptyOrder} from '../../components';
+import React, {useState} from 'react';
+import {View} from 'react-native';
+import {EmptyOrder, Header, OrderTabSection} from '../../components';
 import style from './style';
 
-const Order = () => {
+const Order = ({navigation}) => {
+  const [isEmpty] = useState(false);
   return (
     <View style={style.container}>
-      <EmptyOrder />
+      {isEmpty ? (
+        <EmptyOrder />
+      ) : (
+        <View style={style.pageContent}>
+          <Header nameHeader="Your Orders" nameLabel="Wait for the best meal" />
+          <View style={style.pageTab}>
+            <OrderTabSection />
+          </View>
+        </View>
+      )}
     </View>
   );
 };

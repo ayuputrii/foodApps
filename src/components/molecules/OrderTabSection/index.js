@@ -6,25 +6,27 @@ import ListItemFood from '../ListItemFood';
 import {useNavigation} from '@react-navigation/native';
 import {FoodDummy1} from '../../../assets';
 
-const newTaste = () => {
+const InProgress = () => {
   const navigation = useNavigation();
   return (
     <View style={style.container}>
       <ScrollView>
         <ListItemFood
-          type="product"
-          name="Sop Bumal"
-          price="200.000"
           rating={2}
           image={FoodDummy1}
+          type="in-progress"
+          items={2}
+          price="2.000.000"
+          name="Sop Bumal"
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ListItemFood
-          type="product"
-          name="Sop Bumal"
-          price="200.000"
           rating={2}
           image={FoodDummy1}
+          type="in-progress"
+          items={2}
+          price="2.000.000"
+          name="Sop Bumal"
           onPress={() => navigation.navigate('FoodDetail')}
         />
       </ScrollView>
@@ -32,49 +34,41 @@ const newTaste = () => {
   );
 };
 
-const Popular = () => {
+const PastOrders = () => {
   const navigation = useNavigation();
   return (
     <View style={style.container}>
       <ScrollView>
         <ListItemFood
-          type="product"
-          name="Sop Bumal"
-          price="200.000"
           rating={2}
           image={FoodDummy1}
+          type="past-orders"
+          items={2}
+          price="2.000.000"
+          name="Sop Bumal"
+          date="June 2, 12:20"
+          status="Cancel"
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ListItemFood
-          type="product"
-          name="Sop Bumal"
-          price="200.000"
           rating={2}
           image={FoodDummy1}
-          onPress={() => navigation.navigate('FoodDetail')}
-        />
-      </ScrollView>
-    </View>
-  );
-};
-
-const Recomended = () => {
-  const navigation = useNavigation();
-  return (
-    <View style={style.container}>
-      <ScrollView>
-        <ListItemFood
-          type="product"
+          type="past-orders"
+          items={2}
+          price="2.000.000"
           name="Sop Bumal"
-          price="200.000"
-          image={FoodDummy1}
+          date="June 2, 12:20"
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ListItemFood
-          type="product"
-          name="Sop Bumal"
-          price="200.000"
+          rating={2}
           image={FoodDummy1}
+          type="past-orders"
+          items={2}
+          price="2.000.000"
+          name="Sop Bumal"
+          date="June 2, 12:20"
+          status="Cancel"
           onPress={() => navigation.navigate('FoodDetail')}
         />
       </ScrollView>
@@ -84,18 +78,16 @@ const Recomended = () => {
 
 const initialLayout = {width: Dimensions.get('window').width};
 
-const TabBarSection = () => {
+const OrderTabSection = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    {key: '1', title: 'New Taste'},
-    {key: '2', title: 'Popular'},
-    {key: '3', title: 'Recomended'},
+    {key: '1', title: 'In Progress'},
+    {key: '2', title: 'Past Orders'},
   ]);
 
   const renderScene = SceneMap({
-    1: newTaste,
-    2: Popular,
-    3: Recomended,
+    1: InProgress,
+    2: PastOrders,
   });
 
   const renderTabBar = props => (
@@ -129,4 +121,4 @@ const TabBarSection = () => {
   );
 };
 
-export default TabBarSection;
+export default OrderTabSection;
