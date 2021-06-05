@@ -4,7 +4,7 @@ import {ScrollView, Text, View} from 'react-native';
 import style from './style';
 import {FoodDummy1} from '../../assets';
 
-const OrderSummary = ({navigation}) => {
+const OrderDetail = ({navigation}) => {
   const canGoback = navigation.canGoBack();
   return (
     <ScrollView>
@@ -43,16 +43,22 @@ const OrderSummary = ({navigation}) => {
           <ItemsValue label="House No." value="A5 Hook" />
           <ItemsValue label="City" value="Bandung" />
         </View>
+        <View style={style.content}>
+          <Text style={style.label}>Order Status:</Text>
+          <ItemsValue label="#FM222222" value="Paid" color="#1ABC9C" />
+        </View>
         <View style={style.button}>
           <Button
-            labelButton="Checkout Now"
+            color="#D9435E"
+            textColor="white"
+            labelButton="Cancel Order"
             onPress={() => navigation.replace('OrderSuccess')}
           />
+          <Gap height={20} />
         </View>
-        <Gap height={20} />
       </View>
     </ScrollView>
   );
 };
 
-export default OrderSummary;
+export default OrderDetail;

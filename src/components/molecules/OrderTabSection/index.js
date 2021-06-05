@@ -18,7 +18,7 @@ const InProgress = () => {
           items={2}
           price="2.000.000"
           name="Sop Bumal"
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
         />
         <ListItemFood
           rating={2}
@@ -27,7 +27,7 @@ const InProgress = () => {
           items={2}
           price="2.000.000"
           name="Sop Bumal"
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
         />
       </ScrollView>
     </View>
@@ -48,7 +48,7 @@ const PastOrders = () => {
           name="Sop Bumal"
           date="June 2, 12:20"
           status="Cancel"
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
         />
         <ListItemFood
           rating={2}
@@ -58,7 +58,7 @@ const PastOrders = () => {
           price="2.000.000"
           name="Sop Bumal"
           date="June 2, 12:20"
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
         />
         <ListItemFood
           rating={2}
@@ -69,7 +69,7 @@ const PastOrders = () => {
           name="Sop Bumal"
           date="June 2, 12:20"
           status="Cancel"
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
         />
       </ScrollView>
     </View>
